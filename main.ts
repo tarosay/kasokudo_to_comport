@@ -6,6 +6,6 @@ BaudRate.BaudRate115200
 )
 basic.forever(function () {
     serial.writeNumber(input.acceleration(Dimension.Strength))
-    serial.writeString("")
+    serial.writeLine("")
     basic.pause(100)
 })
