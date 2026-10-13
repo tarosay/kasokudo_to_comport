@@ -5,5 +5,7 @@ SerialPin.USB_RX,
 BaudRate.BaudRate115200
 )
 basic.forever(function () {
-    serial.writeValue("x", input.acceleration(Dimension.Strength))
+    serial.writeNumber(input.acceleration(Dimension.Strength))
+    serial.writeString("")
+    basic.pause(100)
 })
