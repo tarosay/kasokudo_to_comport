@@ -5,7 +5,9 @@ SerialPin.USB_RX,
 BaudRate.BaudRate115200
 )
 basic.forever(function () {
-    serial.writeNumber(input.acceleration(Dimension.Strength))
-    serial.writeLine("")
+    if (input.acceleration(Dimension.Strength) > 2000) {
+        serial.writeNumber(input.acceleration(Dimension.Strength))
+        serial.writeLine("")
+    }
     basic.pause(100)
 })
